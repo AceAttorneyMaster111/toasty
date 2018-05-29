@@ -1,0 +1,16 @@
+{
+  "name": "toasty-v5",
+  "version": "1.0.0",
+  "description": "The fun, moderating, music playing and delicious multi-purpose Discord bot!",
+  "main": "launcher.js",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "klasa": "github:dirigeants/klasa"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
