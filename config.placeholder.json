@@ -1,0 +1,23 @@
+{
+  "prefix": "",
+  "token": "",
+  "betaToken": "",
+  "oauth": "",
+  "sharding": {
+    "shardCount": "auto",
+    "spawnDelay": 5500,
+    "guildsPerShard": 1450,
+    "autoRespawn": true
+  },
+  "tokens": {
+    "discordbotspw": "",
+    "discordbotsorg": "",
+    "botlistspace": "",
+    "news": "",
+    "cleverbot": "",
+    "indico": "",
+    "youtube": "",
+    "weebsh": "",
+    "fortnite": ""
+  }
+}
