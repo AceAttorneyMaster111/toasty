@@ -29,13 +29,14 @@ setupBot = () => {
 
 process.on('unhandledRejection', err => {
   console.log('Unhandled Rejection at:', err.stack || err);
-  Raven.captureException(err);
+  //Raven.captureException(err);
 });
 
 process.on('uncaughtException', err => {
     console.log('Uncaught Exception at:', err.stack || err);
-    Raven.captureException(err);
+    //Raven.captureException(err);
 });
 
-Raven.config(config.tokens.raven).install();
-Raven.context(() => setupBot());
+//Raven.config(config.tokens.raven).install();
+//Raven.context(() => setupBot());
+setupBot();

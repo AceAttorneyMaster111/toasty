@@ -6,6 +6,7 @@
   "dependencies": {
     "common-tags": "^1.8.0",
     "discord.js": "github:discordjs/discord.js",
+    "discord.js-lavalink": "^2.0.2",
     "heapdump": "^0.3.9",
     "klasa": "github:dirigeants/klasa",
     "moment": "^2.22.2",

@@ -10,14 +10,11 @@
     "autoRespawn": true
   },
   "tokens": {
-    "discordbotspw": "",
-    "discordbotsorg": "",
     "botlistspace": "",
     "news": "",
-    "cleverbot": "",
-    "indico": "",
     "youtube": "",
     "weebsh": "",
     "fortnite": ""
-  }
+  },
+  "nodes": { "host": "", "port": 80, "region": "", "password": "" }
 }
