@@ -3,13 +3,13 @@ const { Command } = require('klasa');
 module.exports = class extends Command {
   constructor(...args) {
     super(...args, {
-      description: 'Sends the invite URL so that you can add me to your server.',
+      description: msg => msg.language.get('COMMAND_INVITE_DESCRIPTION'),
       aliases: ['oauth'],
       guarded: true
     });
   }
 
   run(msg) {
-    msg.reply(`You can invite me to your server with the link below!\n**https://toastybot.com/invite**`);
+    msg.reply(msg.language.get('COMMAND_INVITE'));
   }
 };

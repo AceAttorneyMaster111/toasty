@@ -2,11 +2,12 @@ const { Client } = require('klasa');
 const snekfetch = require('snekfetch');
 const Database = require('./Database.js');
 const Pokemon = require('./Pokemon.js');
+const PermissionLevels = require('./PermissionLevels.js');
 const config = require('../config.json');
 
 class ToastyClient extends Client {
   constructor(options) {
-    super(options);
+    super({ ...options, PermissionLevels });
     // Database
     this.r = require('rethinkdbdash')({
       port: 28015,
@@ -24,6 +25,10 @@ class ToastyClient extends Client {
       const moment = require('moment');
       require('moment-duration-format');
       return moment.duration(ms).format(' D [days], H [hrs], m [mins], s [secs]');
+    }
+    this.clean = (text) => {
+      if (typeof(text) === 'string') return text.replace(/`/g, '`' + String.fromCharCode(8203)).replace(/@/g, '@' + String.fromCharCode(8203));
+      else return text;
     }
     this.validURL = (str) => {
       const URLRegex = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;

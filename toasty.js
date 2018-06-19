@@ -6,7 +6,7 @@ const { oneLine } = require('common-tags');
 setupBot = () => {
   new ToastyClient({
     prefix: config.prefix,
-    cmdEditing: true,
+    commandEditing: true,
     disabledEvents: [
       'GUILD_SYNC',
       'CHANNEL_PINS_UPDATE',
@@ -33,8 +33,8 @@ process.on('unhandledRejection', err => {
 });
 
 process.on('uncaughtException', err => {
-    console.log('Uncaught Exception at:', err.stack || err);
-    //Raven.captureException(err);
+  console.log('Uncaught Exception at:', err.stack || err);
+  //Raven.captureException(err);
 });
 
 //Raven.config(config.tokens.raven).install();
