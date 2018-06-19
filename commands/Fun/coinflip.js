@@ -12,6 +12,6 @@ module.exports = class extends Command {
     const m = await msg.sendMessage('Flipping.');
     setTimeout(() => { m.edit('Flipping..'); }, 350);
     setTimeout(() => { m.edit('Flipping...'); }, 700);
-    setTimeout(() => { m.edit(`**${msg.author.username}**, you got **${this.client.randomFromArray(options)}**!`); }, 1000);
+    setTimeout(() => { m.edit(`**${msg.author.username}**, you got **${this.client.functions.randomFromArray(options)}**!`); }, 1000);
   }
 };

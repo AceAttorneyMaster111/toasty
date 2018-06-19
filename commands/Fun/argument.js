@@ -11,6 +11,6 @@ module.exports = class extends Command {
 
   run(msg) {
     const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', '..', 'assets', 'json', 'arguments.json')));
-    msg.sendMessage(this.client.randomFromArray(data));
+    msg.sendMessage(this.client.functions.randomFromArray(data));
   }
 };

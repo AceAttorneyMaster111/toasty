@@ -10,6 +10,6 @@ module.exports = class extends Command {
   }
 
   run(msg, [text]) {
-    msg.sendMessage(this.client.clean(text));
+    msg.sendMessage(this.client.functions.clean(text));
   }
 };

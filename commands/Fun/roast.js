@@ -14,7 +14,7 @@ module.exports = class extends Command {
 
   run(msg, [person = msg.author]) {
     if (thing.toLowerCase().includes('toasty') || thing.includes('<@208946659361554432>')) return msg.reply('🔥 Listen up you dumbass retard! I ain\'t gonna roast myself!');
-    if (msg.content.toLowerCase().startsWith(`${this.client.commandPrefix}roastme`) || msg.content.toLowerCase().startsWith(`${this.client.commandPrefix}roast me`)) return msg.say(`**${msg.author.username}**, :fire: ${this.client.randomArray(roasts)}`);
-    msg.sendMessage(`**${thing}**, 🔥 ${this.client.randomArray(roasts)}`);
+    if (msg.content.toLowerCase().startsWith(`${this.client.commandPrefix}roastme`) || msg.content.toLowerCase().startsWith(`${this.client.commandPrefix}roast me`)) return msg.sendMessage(`**${msg.author.username}**, :fire: ${this.client.functions.randomArray(roasts)}`);
+    msg.sendMessage(`**${thing}**, 🔥 ${this.client.functions.randomArray(roasts)}`);
   }
 };

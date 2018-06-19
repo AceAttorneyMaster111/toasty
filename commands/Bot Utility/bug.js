@@ -13,7 +13,7 @@ module.exports = class extends Command {
   }
 
   run(msg, [bug]) {
-    const content = this.client.clean(`**${msg.author.username}**#${msg.author.discriminator} (${msg.author.id}) reported a bug:\n${bug}\nServer: **${msg.guild.name}**\nID: **${msg.guild.id}**`);
+    const content = this.client.functions.clean(`**${msg.author.username}**#${msg.author.discriminator} (${msg.author.id}) reported a bug:\n${bug}\nServer: **${msg.guild.name}**\nID: **${msg.guild.id}**`);
     const id = '434879965486645259';
     new Promise((resolve, reject) => {
       superagent.post(`https://discordapp.com/api/channels/${id}/messages`)

@@ -20,7 +20,7 @@ module.exports = class extends Command {
 			const allowed = msg.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
 			if (!allowed.length) return msg.sendMessage('🚫 This post contains NSFW content! If you would like to view it, you can run this command in a NSFW channel.');
 			const embed = new this.client.embed();
-			let data = this.client.randomFromArray(allowed).data;
+			let data = this.client.functions.randomFromArray(allowed).data;
 			embed.setColor('#FF4500')
 				.setAuthor(`Requested by ${msg.author.username}`, msg.author.avatarURL())
 				.setTitle(data.title)

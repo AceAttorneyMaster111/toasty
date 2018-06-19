@@ -107,7 +107,6 @@ module.exports = class extends Command {
               notTrading(user.id, trading);
               return;
             } catch (err) {
-              this.client.emit('commandError', this, err);
               msg.reply(':no_entry_sign: An error occurred while trading that Pokemon! My developer has been notified.');
               notTrading(msg.author.id, trading);
               notTrading(user.id, trading);

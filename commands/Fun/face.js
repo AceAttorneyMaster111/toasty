@@ -9,6 +9,6 @@ module.exports = class extends Command {
   }
 
   run(msg) {
-    msg.sendMessage(this.client.randomFromArray(faces));
+    msg.sendMessage(this.client.functions.randomFromArray(faces));
   }
 };

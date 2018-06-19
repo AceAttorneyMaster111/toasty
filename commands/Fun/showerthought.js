@@ -13,6 +13,6 @@ module.exports = class extends Command {
 			.query({ limit: 1000 });
 		const allowed = msg.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
 		if (!allowed.length) return msg.sendMessage('Hmm... It seems the thoughts are all gone right now. Try again later!');
-		msg.sendMessage(`🤔 ${this.client.randomFromArray(allowed).data.title}`);
+		msg.sendMessage(`🤔 ${this.client.functions.randomFromArray(allowed).data.title}`);
 	}
 };

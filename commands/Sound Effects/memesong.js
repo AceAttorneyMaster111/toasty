@@ -20,7 +20,7 @@ module.exports = class extends Command {
     if (!voiceChannel) return msg.reply('🚫 Please be in a voice channel first!');
     if (!this.client.voiceConnections.get(msg.channel.guild.id)) {
       const connnection = await voiceChannel.join().catch(e => msg.sendMessage(`🚫 Something wen't wrong!\n${e}`));
-      const dispatcher = connnection.play(`${dir}/${this.client.randomFromArray(files)}`);
+      const dispatcher = connnection.play(`${dir}/${this.client.functions.randomFromArray(files)}`);
       msg.react('😂');
       dispatcher.on('end', () => voiceChannel.leave());
     } else {

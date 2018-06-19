@@ -12,6 +12,6 @@ module.exports = class extends Command {
 
   run(msg, [person = msg.author]) {
     const emojis = ['😄', '😉', '😋', '👌', '😊', '😇', '😀', '😜'];
-    msg.sendMessage(`**${person}**, ${this.client.randomFromArray(emojis)} ${generator.Compliment()}`);
+    msg.sendMessage(`**${person}**, ${this.client.functions.randomFromArray(emojis)} ${generator.Compliment()}`);
   }
 };
