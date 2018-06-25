@@ -4,27 +4,34 @@ const superagent = require('superagent');
 module.exports = class extends Command {
   constructor(...args) {
     super(...args, {
-      description: 'Allows you to report a bug.',
-      extendedHelp: '**Example Usage:** `bug the ping command doesn\'t work`',
+      description: msg => msg.language.get('BUG_CMD_DESCIPRTION'),
+      extendedHelp: msg => msg.language.get('BUG_CMD_EXTENDEDHELP'),
       runIn: ['text'],
       usage: '<bug:string>',
       cooldown: 30
     });
   }
 
-  run(msg, [bug]) {
-    const content = this.client.functions.clean(`**${msg.author.username}**#${msg.author.discriminator} (${msg.author.id}) reported a bug:\n${bug}\nServer: **${msg.guild.name}**\nID: **${msg.guild.id}**`);
+  async run(msg, [bug]) {
+    const invite = await msg.channel.createInvite({ maxAge: 0, reason: 'To allow Toasty support staff to join your server and fix the issue.' });
+    const embed = new this.client.embed()
+      .setColor('RED')
+      .setTitle('Bug report from:')
+      .setDescription(`**${msg.author.username}**#${msg.author.discriminator} (${msg.author.id})`)
+      .addField('Bug:', bug)
+      .addField(`Server: **${msg.guild.name}** (${msg.guild.id})`, invite)
+    //const content = this.client.functions.clean(`**${msg.author.username}**#${msg.author.discriminator} (${msg.author.id}) reported a bug:\n${bug}\nServer: **${msg.guild.name}**\nID: **${msg.guild.id}**`);
     const id = '434879965486645259';
     new Promise((resolve, reject) => {
       superagent.post(`https://discordapp.com/api/channels/${id}/messages`)
-        .set('Authorization', `Bot ${this.client.token}`).send({ content })
+        .set('Authorization', `Bot ${this.client.token}`).send({ embed })
         .end((err, res) => {
           if (err) {
             reject(err);
-            msg.reply('❌ There was an error while sending your bug report to Toasty HQ. Please try again later.');
+            msg.reply(msg.language.get('BUG_CMD_ERROR'));
           } else {
             resolve(res);
-            msg.say(`✅ **${msg.author.username}**, your bug report has successfully been submitted to Toasty HQ for review. Thank you!\nFor more information on it, join **https://toastybot.com/hq**.`);
+            msg.reply(msg.language.get('BUG_CMD'));
           }
         });
     });
