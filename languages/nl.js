@@ -27,6 +27,14 @@ module.exports = class extends Language {
 			CREDITS_CMD_DESCRIPTION: 'Toont de bot\'s aftiteling.',
 			CLEAN_CMD: '✅ Al mijn berichten zijn succesvol verwijderd!',
 			CLEAN_CMD_DESCRIPTION: 'Verwijdert alle recente commando\'s/berichten gestuurd door de bot.',
+			BUG_CMD_DESCIPRTION: 'Meld een fout in de bot.',
+			BUG_CMD_EXTENDEDHELP: '**Voorbeeld:** `;bug het ping commando werkt niet.`',
+			BUG_CMD: '✅ Jouw verslag is succesvol verzonden naar Toasty HQ om na te kijken. Bedankt! Voor meer informatie, sluit je aan bij **https://toastybot.com/hq**.',
+			BUG_CMD_ERROR: '❌ Er was een fout terwijl je verslag naar Toasty HQ werd verstuurd . Probeer later opnieuw.',
+			SUGGEST_CMD_DESCRIPTION: 'Geef een suggestie voor de bot.',
+			SUGGEST_CMD_EXTENDEDHELP: '**Voorbeeld:** `;suggest maak een meme commando`',
+			SUGGEST_CMD: '✅ Jouw suggestie is succesvol verzonden naar Toasty HQ om na te kijken. Bedankt! Om de status van je verslag na te kijken, sluit je dan aan bij **https://toastybot.com/hq**.',
+			SUGGEST_CMD_ERROR: '❌ Er was een fout terwijl jouw suggestie naar Toasty HQ werd verstuurd. Probeer het later opnieuw.',
 
 			// Pokemon Commands
 			POKEMON_CMD_DESCRIPTION: 'Vang een pokemon!',
@@ -40,7 +48,7 @@ module.exports = class extends Language {
 			INVENTORY_CMD_DONTHAVE: 'Je hebt geen pokemon.',
 			INVENTORY_CMD_DOESNTHAVE: 'Die gebruiker heeft geen pokemon.',
 			INVENTORY_CMD_ONLINEMSG: 'Bekijk je inventaris **[online]',
-			INVENTORY_CMD_REACTMSG: 'Ik ben niet bevoegd om de reacties toe te voegen die verplicht zijn om door de pagina\'s heen te navigeren. Alsjeblieft geef mij de **Add Reactions** machtiging zodat ik een reactie kan zetten op dit bericht.',
+			INVENTORY_CMD_REACTMSG: 'Ik ben niet bevoegd om de reacties toe te voegen die verplicht zijn om door de pagina\'s heen te navigeren. Alsjeblieft geef mij de **Reacties toevoegen** machtiging zodat ik een reactie kan zetten op dit bericht.',
 			INVENTORY_CMD_PAGEMSG: 'Je kan niet een pagina terug gaan als je al op de eerste pagina bent!',
 			INVENTORY_CMD_ENDEDMSG: 'Pokemon inventaris sessie beëindigd',
 			INVENTORY_CMD_INCLUDES: 'Bevat',

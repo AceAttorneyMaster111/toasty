@@ -22,6 +22,14 @@ module.exports = class extends Language {
 			STATS_CMD_DESCRIPTION: 'Sends detailed statistics on the bot.',
 			CLEAN_CMD: '✅ Successfully cleaned up my messages!',
 			CLEAN_CMD_DESCRIPTION: 'Cleans all recent commands/messages sent by the bot.',
+			BUG_CMD_DESCIPRTION: 'Report a bug in the bot.',
+			BUG_CMD_EXTENDEDHELP: '**Example Usage:** `;bug the ping command isn\'t working`',
+			BUG_CMD: '✅ your bug report has successfully been submitted to Toasty HQ for review. Thank you!\nFor more information on it, join **https://toastybot.com/hq**.',
+			BUG_CMD_ERROR: '❌ There was an error while sending your bug report to Toasty HQ. Please try again later.',
+			SUGGEST_CMD_DESCRIPTION: 'Submit a suggestion for the bot.',
+			SUGGEST_CMD_EXTENDEDHELP: '**Example Usage:** `;suggest make a meme command`',
+			SUGGEST_CMD: '✅ your suggestion has successfully been submitted to Toasty HQ for review. Thank you!\nTo check the status of your suggestion, join **https://toastybot.com/hq**.',
+			SUGGEST_CMD_ERROR: '❌ There was an error while sending your suggestion to Toasty HQ. Please try again later.',
 
 			// Miscellaneous Commands
 			DONATE_CMD: 'Donations are **__much__** appreciated! Donate with the link below.\n**https://toastybot.com/donate**',

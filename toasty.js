@@ -22,6 +22,7 @@ setupBot = () => {
     clientOptions: {
       fetchAllMembers: false
     },
+    presence: { activity: { name: ';help | toasty.xyz' } },
     readyMessage: (client) => oneLine`Shard ${client.shard.id + 1}/${client.shard.count} ready!
       On ${client.guilds.size.toLocaleString()} guilds w/ ${client.users.size.toLocaleString()} users.`
   }).login(config.betaToken);

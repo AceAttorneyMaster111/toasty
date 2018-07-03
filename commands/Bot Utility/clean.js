@@ -12,7 +12,7 @@ module.exports = class extends Command {
     const msgs = await msg.channel.messages.fetch({ limit: 90 });
     const msgArray = msgs.filter(mes =>
       mes.author.id === this.client.user.id
-      || mes.content.startsWith(msg.configs.prefix)
+      || mes.content.startsWith(msg.guildConfigs.prefix)
       || mes.content.toLowerCase().startsWith('cancel')
     );
     msg.channel.bulkDelete(msgArray);

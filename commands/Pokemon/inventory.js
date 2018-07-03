@@ -7,8 +7,9 @@ module.exports = class extends Command {
     super(...args, {
       description: msg => msg.language.get('INVENTORY_CMD_DESCRIPTION'),
       runIn: ['text'],
+      aliases: ['inv'],
       usage: '[user:username]',
-      cooldown: 10
+      cooldown: 5
     });
   }
 

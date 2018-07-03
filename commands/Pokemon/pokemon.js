@@ -21,9 +21,8 @@ module.exports = class extends Command {
     const received = await this.client.pokemon.hasReceived(user.id);
     if (received && user.id !== '266619835738357770') {
       const next = await this.client.pokemon.nextPokemon(user.id);
-      return msg.sendMessage(oneLine`
-        🚫 **${user.username}**,
-        ${msg.languauge.get('POKEMON_CMD_COOLDOWNMSG_1')} **${moment.duration(next).format(' H [hours], m [minutes] & s [seconds]')}**
+      return msg.reply(oneLine`
+        🚫 ${msg.languauge.get('POKEMON_CMD_COOLDOWNMSG_1')} **${moment.duration(next).format(' H [hours], m [minutes] & s [seconds]')}**
         ${msg.language.get('POKEMON_CMD_COOLDOWNMSG_2')}
       `);
     }

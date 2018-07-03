@@ -20,8 +20,16 @@ module.exports = class extends Language {
 			INVITE_CMD_DESCRIPTION: 'Envoyez l\'url d\'invitation pour pouvoir m\'ajouter à ton serveur.',
 			SHARDS_CMD_DESCRIPTION: 'Envoi des stats sur les shards du bot.',
 			STATS_CMD_DESCRIPTION: 'Envoi des statistiques détaillées sur le bot',
-			CLEAN_CMD: '✅ Successfully cleaned up my messages!',
-			CLEAN_CMD_DESCRIPTION: 'Cleans all recent commands/messages sent by the bot.',
+			CLEAN_CMD: '✅ Messages du bot correctement effacés!',
+			CLEAN_CMD_DESCRIPTION: 'Efface toutes les commandes et tous les messages récents du bot.',
+			BUG_CMD_DESCIPRTION: 'Faire un rapport de bug du bot.',
+			BUG_CMD_EXTENDEDHELP: '**Exemple :** `;bug la commande [ping] ne fonctionne pas.`',
+			BUG_CMD: '✅ Ton rapport de bug a bien été transmit à Toasty HQ pour vérifications. Merci ! Pour plus d\'informations, rends-toi sur **https://toastybot.com/hq**.',
+			BUG_CMD_ERROR: '❌ Il y a eu une erreur lors de l\'envoi du rapport de bug à Toasty HQ. Merci de réessayer plus tard.',
+			SUGGEST_CMD_DESCRIPTION: 'Envoie une suggestion pour le bot.',
+			SUGGEST_CMD_EXTENDEDHELP: '**Exemple :** `;suggest créer une commande meme`',
+			SUGGEST_CMD: '✅ Ta suggestion a bien été transmise à Toasty HQ et va être étudiée. Merci ! Pour voir son évolution, rends-toi sur **https://toastybot.com/hq**.',
+			SUGGEST_CMD_ERROR: '❌ There was an error while sending your suggestion to Toasty HQ. Please try again later.',
 
 			// Miscellaneous Commands
 			DONATE_CMD: 'Les dons sont __**très**__ appréciés ! Fais un don avec le lien ci-dessous.\n**https://toastybot.com/donate**',
@@ -36,13 +44,13 @@ module.exports = class extends Language {
 			POKEMON_CMD_CATCHFAILMSG: 'Tu n\'as pas réussi à attraper de pokemon 😢',
 			POKEMON_CMD_CATCHMSG: 'tu as attrapé une',
 
-			INVENTORY_CMD_DESCRIPTION: 'Shows you, or the mentioned user\'s pokemon inventory.',
+			INVENTORY_CMD_DESCRIPTION: 'Montre ton inventaire ou celui de la personne mentionnée.',
 			INVENTORY_CMD_DONTHAVE: 'Tu n\'as aucun pokemon.',
 			INVENTORY_CMD_DOESNTHAVE: 'Cet utilisateur n\'a aucun pokemon.',
 			INVENTORY_CMD_ONLINEMSG: 'Va voir ton inventaire **[en ligne]',
-			INVENTORY_CMD_REACTMSG: 'I am unable to add the reactions required to navigate through the pages. Please give me the **Add Reactions** permission so that I can react to this message.',
-			INVENTORY_CMD_PAGEMSG: 'you cannot go back to a page if you\'re already on the first page!',
-			INVENTORY_CMD_ENDEDMSG: 'Pokemon inventory session ended.',
+			INVENTORY_CMD_REACTMSG: 'Je suis incapable d\'ajouter les réactions pour naviguer à travers les différentes pages. Ajoute-moi la permission **Ajouter des réactions** pour que je puisse réagir à ce message.',
+			INVENTORY_CMD_PAGEMSG: 'Tu ne peux pas revenir en arrière si tu es déjà sur la première page.',
+			INVENTORY_CMD_ENDEDMSG: 'la session d\'inventaire pokemon s\'est terminée.',
 			INVENTORY_CMD_INCLUDES: 'Comprend',
 
 

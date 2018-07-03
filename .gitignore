@@ -1,4 +1,7 @@
 node_modules/
 assets/
 lavalink/
+logs/
+languages/
+bwd/
 config.json
