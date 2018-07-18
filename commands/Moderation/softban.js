@@ -7,18 +7,19 @@ module.exports = class extends Command {
       runIn: ['text'],
       description: '',
       quotedStringSupport: false,
-      usage: '<user:username> [days:int{1,7}] [reason:string] [...]',
+      usage: '<user:user> [days:int{1,7}] [reason:string] [...]',
       usageDelim: ' '
     });
   }
 
     async run(msg, [user, days = 1, ...reason]) {
       if (user.id === this.client.user.id) return msg.reply('I can\'t ban myself \\:P');
-      if (user.id === msg.author.id) return msg.reply(``);
-      if (user.bannable === false) return msg.reply(``);
-      reason = reason.length > 0 ? `${reason.join(' ')}\nBanned By: ${msg.author.tag}` : `No reason specified.\nBanned By: ${msg.author.tag}`;
-      await user.ban({ days: days, reason: reason });
-      msg.guild.members.unban(user.id);
-      return msg.sendMessage(`<:penguSuccess:435712876506775553> ***${user.username} ${msg.language.get('MESSAGE_SOFTBANNED')}***`);
+      if (user.id === msg.author.id) return msg.reply('You can\'t ban yourself \\:P');
+      const member = await msg.guild.members.fetch(user).catch(() => null);
+      await member.ban({ days, reason });
+      setTimeout(() => {
+        msg.guild.members.unban(user.id);
+        msg.sendMessage(`✅ I've successfully softbanned **${user.username}**#${user.discriminator}.`);
+      }, 200);
     }
 };
